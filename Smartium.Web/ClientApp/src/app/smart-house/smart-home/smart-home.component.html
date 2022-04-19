@@ -1,0 +1,33 @@
+<h1>Smart house - {{houseName}}</h1>
+
+<p>This is a simple example of an house component.</p>
+
+<div class="row">
+    <div class="col-sm-4">
+      <div class="card" [routerLink]="['/climate/', houseId]">
+        <img src="../../../assets/climate.png" class="card-img-top" alt="climate">
+        <div class="card-body">
+            <h5 class="card-title">Climate</h5>
+            <p class="card-text">Here you can monitor and control climate in your house.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <img src="../../../assets/security.png" class="card-img-top" alt="climate">
+        <div class="card-body">
+            <h5 class="card-title">Security</h5>
+            <p class="card-text">Here you can monitor and control security in your house.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <img src="../../../assets/water.png" class="card-img-top" alt="climate">
+        <div class="card-body">
+            <h5 class="card-title">Water</h5>
+            <p class="card-text">Here you can monitor and control water in your house.</p>
+        </div>
+      </div>
+    </div>
+  </div>

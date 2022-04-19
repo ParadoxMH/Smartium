@@ -1,0 +1,18 @@
+<h1 id="tableLabel">Smartium houses</h1>
+
+<p>Here you can see all your smart houses.</p>
+
+<p *ngIf="!houses"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="houses">
+  <thead>
+    <tr>
+      <th>House Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let house of houses">
+      <td><a class="nav-link text-dark" [routerLink]='["/smart-house/", house.houseId]' title="Smart Home">{{ house.name }}</a></td>
+    </tr>
+  </tbody>
+</table>
