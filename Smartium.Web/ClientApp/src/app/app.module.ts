@@ -15,7 +15,7 @@ import { AuthorizeInterceptor } from 'src/api-authorization/authorize.intercepto
 import { SmartHouseMenuComponent } from './smart-house/smart-house-menu/smart-house-menu.component';
 import { SmartHomeComponent } from './smart-house/smart-home/smart-home.component';
 import { ClimateComponent } from './smart-house/climate/climate.component';
-
+import { NgChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -34,6 +34,7 @@ import { ClimateComponent } from './smart-house/climate/climate.component';
     HttpClientModule,
     FormsModule,
     ApiAuthorizationModule,
+    NgChartsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },

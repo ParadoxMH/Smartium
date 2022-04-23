@@ -7,12 +7,23 @@
 <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="houses">
   <thead>
     <tr>
+      <!-- <th></th> -->
       <th>House Name</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let house of houses">
-      <td><a class="nav-link text-dark" [routerLink]='["/smart-house/", house.houseId]' title="Smart Home">{{ house.name }}</a></td>
+      <!-- <td>
+        <a class="nav-link text-dark" [routerLink]='["/smart-house/", house.houseId]' title="Smart Home">
+          <img src="../../../assets/smart-home-icon-1.png" alt="smart-home-icon" class="image">
+        </a>
+      </td> -->
+      <td>
+        <a class="nav-link text-dark" [routerLink]='["/smart-house/", house.houseId]' title="Smart Home">
+          <!-- <img src="../../../assets/smart-home-icon-1.png" alt="smart-home-icon" class="image"> -->
+          {{ house.name }}
+        </a>
+      </td>
     </tr>
   </tbody>
 </table>

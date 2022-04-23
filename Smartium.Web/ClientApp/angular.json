@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "f0b07110-e15e-41ff-bbbb-fd7525ed4f3f"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -13,8 +16,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "progress": false,
-            "extractCss": true,
+            "progress": false, 
             "outputPath": "dist",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -37,8 +39,7 @@
               ],
               "optimization": true,
               "outputHashing": "all",
-              "sourceMap": false,
-              "extractCss": true,
+              "sourceMap": false, 
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
