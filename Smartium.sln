@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smartium.Web", "Smartium.Web\Smartium.Web.csproj", "{07D71D0B-BA17-44F1-8FFF-C2B741E17269}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smartium.Web", "Smartium.Web\Smartium.Web.csproj", "{07D71D0B-BA17-44F1-8FFF-C2B741E17269}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imitator", "Imitator\Imitator.csproj", "{B839BBB5-761F-4E69-8E5B-8CA803354E6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Imitator.Tests", "Imitator.Tests\Imitator.Tests.csproj", "{C0F81DFA-346E-4077-AA82-B293871F0AAB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{07D71D0B-BA17-44F1-8FFF-C2B741E17269}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07D71D0B-BA17-44F1-8FFF-C2B741E17269}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07D71D0B-BA17-44F1-8FFF-C2B741E17269}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B839BBB5-761F-4E69-8E5B-8CA803354E6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B839BBB5-761F-4E69-8E5B-8CA803354E6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B839BBB5-761F-4E69-8E5B-8CA803354E6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B839BBB5-761F-4E69-8E5B-8CA803354E6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0F81DFA-346E-4077-AA82-B293871F0AAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0F81DFA-346E-4077-AA82-B293871F0AAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0F81DFA-346E-4077-AA82-B293871F0AAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0F81DFA-346E-4077-AA82-B293871F0AAB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
