@@ -1,4 +1,6 @@
-﻿using Smartium.Web.Models;
+﻿using Microsoft.AspNetCore.Identity;
+using Smartium.Web.Common;
+using Smartium.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,9 +10,20 @@ namespace Smartium.Web.Data
 {
     public class DbInitializer
     {
-        public static void Initialize(ApplicationDbContext context)
+        public static async Task Initialize(ApplicationDbContext context, RoleManager<IdentityRole> roleManager)
         {
             context.Database.EnsureCreated();
+
+            string[] roleNames = { Constants.Roles.SuperAdmin, Constants.Roles.Manager, Constants.Roles.Resident };
+
+            foreach (var roleName in roleNames)
+            {
+                IdentityRole role = await roleManager.FindByNameAsync(roleName);
+                if (role == null)
+                {
+                    await roleManager.CreateAsync(new IdentityRole(roleName));
+                }
+            }
 
             // Look for any students.
             if (context.House.Any())
@@ -20,7 +33,8 @@ namespace Smartium.Web.Data
 
             var students = new House[]
             {
-                new House{Name = "My House",  UserId="29bbe010-e7ce-4206-b5c7-f3b10026f85c"}
+                new House{Name = "Rivnenska 12a 10",  UserId="29bbe010-e7ce-4206-b5c7-f3b10026f85c"},
+                new House{Name = "Rivnenska 12a 14",  UserId="29bbe010-e7ce-4206-b5c7-f3b10026f85c"}
             };
             foreach (House s in students)
             {

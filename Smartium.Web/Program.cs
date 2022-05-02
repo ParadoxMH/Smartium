@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -35,7 +36,8 @@ namespace Smartium.Web
                 try
                 {
                     var context = services.GetRequiredService<ApplicationDbContext>();
-                    DbInitializer.Initialize(context);
+                    var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
+                    DbInitializer.Initialize(context, roleManager).Wait();
                 }
                 catch (Exception ex)
                 {
