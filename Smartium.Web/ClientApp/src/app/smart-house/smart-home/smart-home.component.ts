@@ -8,7 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 
 export class SmartHomeComponent {
   public houseId = 0;
-  public houseName = 'My fisrt house';
+  public houseName = 'Rivnenska 12a 10';
 
   constructor(private route: ActivatedRoute) {}
 

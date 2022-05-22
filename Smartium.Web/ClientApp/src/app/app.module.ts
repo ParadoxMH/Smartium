@@ -15,8 +15,11 @@ import { AuthorizeInterceptor } from 'src/api-authorization/authorize.intercepto
 import { SmartHouseMenuComponent } from './smart-house/smart-house-menu/smart-house-menu.component';
 import { SmartHomeComponent } from './smart-house/smart-home/smart-home.component';
 import { ClimateComponent } from './smart-house/climate/climate.component';
+import { SecurityComponent } from './smart-house/security/security.component';
+import { ImitationComponent } from './smart-house/security/imitation/imitation.component';
 import { NgChartsModule } from 'ng2-charts';
-
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -27,14 +30,18 @@ import { NgChartsModule } from 'ng2-charts';
     FetchDataComponent,
     SmartHouseMenuComponent,
     SmartHomeComponent,
-    ClimateComponent
+    ClimateComponent,
+    SecurityComponent,
+    ImitationComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
-    FormsModule,
+    MatSlideToggleModule,
+    MatButtonModule,
+    FormsModule, 
     ApiAuthorizationModule,
-    NgChartsModule,
+    NgChartsModule, 
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
@@ -42,6 +49,8 @@ import { NgChartsModule } from 'ng2-charts';
       { path: 'smart-house-menu', component: SmartHouseMenuComponent, canActivate: [AuthorizeGuard] },
       { path: 'smart-house/:houseId', component: SmartHomeComponent, canActivate: [AuthorizeGuard] },
       { path: 'climate/:houseId', component: ClimateComponent, canActivate: [AuthorizeGuard] },
+      { path: 'security/:houseId', component: SecurityComponent, canActivate: [AuthorizeGuard] },
+      { path: 'imitation/:houseId', component: ImitationComponent, canActivate: [AuthorizeGuard] },
     ])
   ],
   providers: [

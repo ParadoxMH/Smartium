@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Smartium.Models.Climate">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAQEAAAAAAAIAAAAAAAgAACAABIACAAAABA=</HashCode>
+      <FileName>Climate.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Smartium.Models.FireProtection">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAYIAAAAAEAAABgAAAAABIAAAAAAAA=</HashCode>
+      <FileName>FireProtection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Smartium.Models.House">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAwAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>House.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Smartium.Models.IndicatorLog">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAABhAAAAAAA=</HashCode>
+      <FileName>IndicatorLog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Smartium.Models.Lighthing">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAACoAAAAAAAAAAAAAAAggAAAAAAIAAAAGAAA=</HashCode>
+      <FileName>Lighthing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Smartium.Models.Security">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAGAAAAhAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Security.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Smartium.Models.WaterSystem">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAQAAEAAAAAAAAEAAABgAAAAAAIAAEACABA=</HashCode>
+      <FileName>WaterSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Smartium.Models.Enums.IndicatorType">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAIAAEAAAAAAAAAAAAACAAAKAAAAIAAAAAACAAA=</HashCode>
+      <FileName>Enums\IndicatorType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

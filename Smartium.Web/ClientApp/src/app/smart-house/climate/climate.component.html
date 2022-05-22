@@ -2,7 +2,7 @@
 
 <p>This is a simple example of an house climate control manager component.</p>
 
-<div class="row">
+<!-- <div class="row">
     <div class="col-sm-6">
         <div class="mb-3">
             <label for="maxTemp" class="form-label">Comfort temperature</label>
@@ -15,34 +15,50 @@
             <input type="number" class="form-control" id="maxHumidity" placeholder="Enter max humidity">
         </div>
     </div>
+</div> -->
+
+<mat-slide-toggle color="primary" [(ngModel)]="isPrediction">Set temp base on prediction.</mat-slide-toggle>
+
+
+<div class="flex-item" [hidden]="isPrediction">
+  <h3>Setup your comfort temperature:</h3>
+  <table class="table table-responsive table-condensed">
+    <tr>
+      <th >Hours</th>
+      <th *ngFor="let item of comfortTempList">{{item.hour}}</th>
+    </tr>
+    <tr  >
+      <td >Values</td> 
+      <td *ngFor="let item of comfortTempList" >
+        <input type="number" class="form-control"  [(ngModel)]="item.valueTemp" style="width: 60px;">
+      </td>
+    </tr>
+  </table>
+  <button mat-raised-button color="primary" >Save</button> 
 </div>
 
-<div class="flex">
+
+
+
+<div class="flex" [hidden]="!isPrediction">
     <div class="flex-item">
       <div style="display: block;">
       <canvas baseChart width="400" height="150"
                   [data]="lineChartData"
                   [options]="lineChartOptions"
-                  [type]="lineChartType"
-                  (chartHover)="chartHovered($event)"
-                  (chartClick)="chartClicked($event)"></canvas>
+                  [type]="lineChartType"></canvas>
       </div>
     </div>
     <div class="flex-item">
       <table class="table table-responsive table-condensed">
         <tr>
+          <th>Date</th>
           <th *ngFor="let label of lineChartData.labels">{{label}}</th>
         </tr>
         <tr *ngFor="let d of lineChartData.datasets; let i=index" [class]="'line-'+i">
+          <td >{{d && d.label}}</td>
           <td *ngFor="let label of lineChartData.labels; let j=index">{{d && d.data[j]}}</td>
         </tr>
       </table>
-      <div class="button-row">
-        <button mat-button mat-raised-button color="primary" (click)="randomize()">Randomize</button>
-        <button mat-button mat-raised-button color="primary" (click)="pushOne()">Push</button>
-        <button mat-button mat-raised-button color="primary" (click)="changeColor()">Recolor</button>
-        <button mat-button mat-raised-button color="primary" (click)="hideOne()">Toggle Series B</button>
-        <button mat-button mat-raised-button color="primary" (click)="changeLabel()">Change Label</button>
-      </div>
     </div>
   </div>
